@@ -1,0 +1,24 @@
+html,
+body {
+  height: 100vh;
+}
+
+#root,
+.MuiBox-root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Roboto', 'IBM Plex Sans', monospace;
+}
