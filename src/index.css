@@ -22,3 +22,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Roboto', 'IBM Plex Sans', monospace;
 }
+
+/* INPUT */
+
+.rowsQuantityInput {
+  margin-left: 2px;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
