@@ -1,15 +1,15 @@
 import { FC } from 'react';
-import { TableRow, Typography } from '@mui/material';
+import { TableCell, Typography } from '@mui/material';
 import useRowsQuantity from '../hooks/useRowsQuantity';
 
 const RowsQuantity: FC = () => {
   const { handleQuantityChange, inputValue, handleOnBlur, handleOnEnterPress } = useRowsQuantity();
 
   return (
-    <TableRow
+    <TableCell
       sx={{
         display: 'flex',
-        flexDirection: 'column',
+        gap: '8px',
         alignItems: 'center',
         justifyContent: 'center'
       }}
@@ -25,7 +25,7 @@ const RowsQuantity: FC = () => {
         onBlur={handleOnBlur}
         onKeyDown={handleOnEnterPress}
       />
-    </TableRow>
+    </TableCell>
   );
 };
 

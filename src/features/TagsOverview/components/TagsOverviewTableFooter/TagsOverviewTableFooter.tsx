@@ -1,12 +1,14 @@
-import  { FC } from 'react'
-import { TableFooter } from '@mui/material'
+import { FC } from 'react';
+import { TableCell, TableFooter, TableRow } from '@mui/material';
 
-const TagsOverviewTableFooter:FC = () => {
+const TagsOverviewTableFooter: FC = () => {
   return (
     <TableFooter>
-        Table footer
+      <TableRow>
+        <TableCell>Table footer</TableCell>
+      </TableRow>
     </TableFooter>
-  )
-}
+  );
+};
 
-export default TagsOverviewTableFooter
+export default TagsOverviewTableFooter;
