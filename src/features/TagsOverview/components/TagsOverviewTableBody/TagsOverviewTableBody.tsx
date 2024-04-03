@@ -12,8 +12,15 @@ const TagsOverviewTableBody: FC = () => {
   return (
     <TableBody>
       {tagsData?.map((tag: ModelTagsData, index: number) => (
-        <TableRow key={index}>
-          <TableCell>{tag.name}</TableCell>
+        <TableRow
+          key={index}
+          sx={{
+            '&:hover': {
+              backgroundColor: 'rgba(0, 0, 0, 0.04)'
+            }
+          }}
+        >
+          <TableCell colSpan={2}>{tag.name}</TableCell>
           <TableCell>{tag.count}</TableCell>
         </TableRow>
       ))}

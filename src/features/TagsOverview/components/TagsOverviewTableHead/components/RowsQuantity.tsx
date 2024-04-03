@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { TableCell, Typography } from '@mui/material';
+import { Box, TableCell, Typography } from '@mui/material';
 import useRowsQuantity from '../hooks/useRowsQuantity';
 
 const RowsQuantity: FC = () => {
@@ -8,23 +8,27 @@ const RowsQuantity: FC = () => {
   return (
     <TableCell
       sx={{
-        display: 'flex',
-        gap: '8px',
-        alignItems: 'center',
-        justifyContent: 'center'
+        width: '33%',
+        textAlign: 'center',
+        position: 'sticky',
+        top: '-2px',
+        zIndex: '2',
+        background: 'white'
       }}
     >
-      <Typography fontSize="12px" fontWeight="500">
-        Rows per page
-      </Typography>
-      <input
-        className="rowsQuantityInput"
-        type="text"
-        value={inputValue}
-        onChange={handleQuantityChange}
-        onBlur={handleOnBlur}
-        onKeyDown={handleOnEnterPress}
-      />
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '8px' }}>
+        <Typography fontSize="12px" fontWeight="500">
+          Rows per page
+        </Typography>
+        <input
+          className="rowsQuantityInput"
+          type="text"
+          value={inputValue}
+          onChange={handleQuantityChange}
+          onBlur={handleOnBlur}
+          onKeyDown={handleOnEnterPress}
+        />
+      </Box>
     </TableCell>
   );
 };
