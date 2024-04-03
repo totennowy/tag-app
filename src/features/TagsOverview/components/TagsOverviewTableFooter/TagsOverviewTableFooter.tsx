@@ -5,7 +5,7 @@ const TagsOverviewTableFooter: FC = () => {
   return (
     <TableFooter>
       <TableRow>
-        <TableCell>Table footer</TableCell>
+        <TableCell></TableCell>
       </TableRow>
     </TableFooter>
   );
