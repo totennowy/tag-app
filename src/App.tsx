@@ -1,5 +1,6 @@
 import { TagsOverviewProvider } from './contexts/TagsOverviewContext/TagsOverviewContext';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { CustomSnackbarProvider } from './contexts/CustomSnackbarContext/CustomSnackbarContext';
 import TagsOverview from './features/TagsOverview/TagsOverview';
 import MainLayout from './layout/MainLayout';
 
@@ -9,9 +10,11 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TagsOverviewProvider>
-        <MainLayout>
-          <TagsOverview />
-        </MainLayout>
+        <CustomSnackbarProvider>
+          <MainLayout>
+            <TagsOverview />
+          </MainLayout>
+        </CustomSnackbarProvider>
       </TagsOverviewProvider>
     </QueryClientProvider>
   );
