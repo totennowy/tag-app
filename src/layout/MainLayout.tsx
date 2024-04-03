@@ -9,7 +9,8 @@ const MainLayout: FC<ModelMainLayout> = ({ children }) => {
         maxHeight: '100vh',
         display: 'flex',
         height: '100%',
-        padding: '40px'
+        padding: '40px',
+        justifyContent: 'center'
       }}
     >
       {children}
