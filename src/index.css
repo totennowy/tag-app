@@ -34,3 +34,22 @@ code {
   text-align: center;
   box-sizing: border-box;
 }
+
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8ecf2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5d0de;
+  border-radius: 6px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c5d0de #e8ecf2;
+}
