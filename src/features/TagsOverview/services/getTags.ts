@@ -1,13 +1,18 @@
 import axios from 'axios';
 
-const getTags = async (tableRowsQuantity: number, currentPage: number) => {
+const getTags = async (
+  tableRowsQuantity: number,
+  currentPage: number,
+  sortType: 'asc' | 'desc',
+  sortOptions: 'name' | 'popular' | 'activity'
+) => {
   try {
     const response = await axios.get(`https://api.stackexchange.com/2.3/tags`, {
       params: {
         pagesize: tableRowsQuantity,
         page: currentPage,
-        order: 'asc',
-        sort: 'name',
+        order: sortType,
+        sort: sortOptions,
         site: 'stackoverflow'
       }
     });
