@@ -15,4 +15,8 @@ export type ModelTagsOverviewContext = {
   setCurrentPage: (page: number) => void;
   hasMoreData: boolean;
   setHasMoreData: (hasMore: boolean) => void;
+  sortType: 'asc' | 'desc';
+  setSortType: (type: 'asc' | 'desc') => void;
+  sortOptions: 'name' | 'popular' | 'activity';
+  setSortOptions: (type: 'name' | 'popular' | 'activity') => void;
 };

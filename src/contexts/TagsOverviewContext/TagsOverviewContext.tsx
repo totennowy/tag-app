@@ -15,6 +15,8 @@ export const useTagsOverviewContext = () => {
 export const TagsOverviewProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [tableRowsQuantity, setTableRowsQuantity] = useState<number>(20);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [sortType, setSortType] = useState<'asc' | 'desc'>('asc');
+  const [sortOptions, setSortOptions] = useState<'name' | 'popular' | 'activity'>('name');
   const [tagsData, setTagsData] = useState<ModelTagsData[]>([]);
   const [hasMoreData, setHasMoreData] = useState<boolean>(true);
 
@@ -25,6 +27,10 @@ export const TagsOverviewProvider: React.FC<{ children: ReactNode }> = ({ childr
         setTableRowsQuantity,
         currentPage,
         setCurrentPage,
+        sortType,
+        setSortType,
+        sortOptions,
+        setSortOptions,
         tagsData,
         setTagsData,
         hasMoreData,
